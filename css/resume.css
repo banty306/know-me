@@ -4,6 +4,22 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
+import * as DarkModeToggle from 'https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs';
+
+const toggle = document.querySelector('dark-mode-toggle');
+const body = document.body;
+
+// Set or remove the `dark` class the first time.
+toggle.mode === 'dark' ? body.classList.add('dark') : body.classList.remove('dark');
+
+// Listen for toggle changes (which includes `prefers-color-scheme` changes)
+// and toggle the `dark` class accordingly.
+toggle.addEventListener('colorschemechange', () => {
+  body.classList.toggle('dark', toggle.mode === 'dark');
+});
+
+
+
 body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
@@ -174,3 +190,5 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+
