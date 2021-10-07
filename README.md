@@ -8,8 +8,6 @@ Hosted on
 
 [fork my repository](https://github.com/user/repository/fork)
 
-[watch this repo](https://github.com/user/repository/subscription)
-https://github.com/jonsn0w/Hyde/watchers
 
 
 
